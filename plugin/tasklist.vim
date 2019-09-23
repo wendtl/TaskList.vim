@@ -183,7 +183,7 @@ function! s:SearchFile(hits, word)
         if foldlevel(l:curr_line) != 0
             normal! 99zo
         endif
-        if l:div == 0 
+        if l:div == 0
             if a:hits != 0
                 let @z = @z."\n"
             endif
@@ -365,7 +365,7 @@ endfunction
 command! TaskList call s:TaskList()
 
 " Default key map
-if !hasmapto('<Plug>TaskList')
+if !hasmapto(':TaskList<CR>')
     map <unique> <Leader>t <Plug>TaskList
 endif
 
